@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+backend/node_modules/
+
+# Production Build
+frontend/dist/
+backend/public/
+
+# WhatsApp Session and Database
+backend/database/
+.wwebjs_auth/
+.wwebjs_cache/
+
+# Environment and Logs
+.env
+*.log
+.DS_Store

@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  whatsapp-scheduler:
+    build: .
+    container_name: ricieri30_whatsapp_scheduler_pro
+    ports:
+      - "3005:3005"
+    volumes:
+      # Persist WhatsApp session and Database inside the dedicated database folder
+      - ./backend/database:/app/backend/database
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+      - PORT=3005

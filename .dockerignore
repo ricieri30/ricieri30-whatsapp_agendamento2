@@ -1,0 +1,10 @@
+node_modules
+dist
+.wwebjs_auth
+.wwebjs_cache
+messages.db
+backend/node_modules
+frontend/node_modules
+backend/database
+backend/public
+.git

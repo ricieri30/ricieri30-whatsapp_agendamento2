@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --primary: #00ffa3;
+  --secondary: #00ccff;
+}
+
+body {
+  @apply bg-[#0a0f18] text-white min-h-screen overflow-x-hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.btn-primary {
+  @apply px-4 py-2 rounded-lg bg-gradient-to-r from-[#00ffa3] to-[#00ccff] text-[#0a0f18] font-bold 
+  hover:opacity-90 transition-all active:scale-95 shadow-[0_0_20px_rgba(0,255,163,0.3)];
+}
+
+.input-glass {
+  @apply bg-white/5 border border-white/10 rounded-lg px-4 py-2 outline-none focus:border-[#00ffa3]/50 transition-all;
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+}
+
+.bg-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, #00ffa311 0%, transparent 70%);
+  pointer-events: none;
+  z-index: -1;
+}
